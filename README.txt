@@ -19,7 +19,7 @@ The following files containe datasets:
   * build_supervised_dataset.m
   
  -----------------------------------------------------------------------------------
- The LR and SVM are implemented in MATLAB (logistic_regression.m, run_svm.m) and ANN in Python (TFANN.py).
+ The LR and SVM are implemented in MATLAB (logistic_regression.m, run_svm.m) and ANN in Python (ANN_alt_solution.py, TFANN.py).
 
 
 **File: build_supervised_dataset_fake_friction.m
