@@ -14,7 +14,7 @@
 % max_search_time = 5
 % Set search region (for prev. measured friction values)
 % search_region = 0.04
-
+for loop = 0:30:120
 
 %% Define date/time format
 formatIn = 'yyyy-mm-dd HH:MM:SS';
@@ -36,6 +36,7 @@ max_search_time = 5;
 % Set search region (for prev. measured friction values) (defalt 0.04, gps
 % coords (inactive)
 search_region = 0.04;
+offset_time = loop;
 
 % Error check
 if inc_min_step > prev_time
@@ -369,5 +370,6 @@ end
 
     
 %% Save cleareddataset as .csv and .mat
-csvwrite(['ANN/cleareddataset' num2str(loop) '.csv'],cleareddataset)
+csvwrite(['cleareddataset' num2str(loop) '.csv'],cleareddataset)
 save(['cleareddataset' num2str(loop) '.mat'])
+end
