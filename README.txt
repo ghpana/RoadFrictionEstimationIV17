@@ -1,4 +1,21 @@
-README
+--------------Supervised Road Friction Prediction from Fleet of Car Data ------------------------------
+-------------------------------------------------------------------------------------------------------
+Three classification methods are used for the predict the friction class (slippery
+or non-slippery) in the future for specific road segments.
+  1- logistic regression
+  2- support vector machine
+  3- neural networks
+The overall procedure after collecting the dataset and pre-processing can be divided in the following steps:
+  1- dimensionality reduction
+  2- training the supervised classifiers
+  3- evaluation 
+-----------------------------------------------------------------------------------
+The following files containe datasets: 
+  * dataset_list.xlsx
+  * query_weatherstation_save_1435.csv
+  * SMHITemp.csv - väderleksdata
+ Moreover as we connot share the original frictin value dataset, herein simulation data generated in 
+
 
 Inkluderar följande källkodsfiler:
 Matlab:
@@ -9,9 +26,7 @@ run_svm.m
 Python:
 TFANN.py
 
-Resursfiler:
-dataset_list.xlsx
-query_weatherstation_save_1435.csv, SMHITemp.csv - väderleksdata
+
 
 **Fil 1: build_supervised_dataset_fake_friction.m
 Denna fil används för att bygga ett data set med fejkade friktionsvärden i kombination med 
