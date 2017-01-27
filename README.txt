@@ -14,29 +14,20 @@ The following files containe datasets:
   * dataset_list.xlsx
   * query_weatherstation_save_1435.csv
   * SMHITemp.csv - väderleksdata
- Moreover as we connot share the original frictin value dataset, herein simulation data generated in 
+ Moreover as we connot share the original frictin value datasets, herein simulation data generated in 
+  * build_supervised_dataset_fake_friction.m
+  * build_supervised_dataset.m
+  
+ -----------------------------------------------------------------------------------
+ The LR and SVM are implemented in MATLAB (logistic_regression.m, run_svm.m) and ANN in Python (TFANN.py).
 
 
-Inkluderar följande källkodsfiler:
-Matlab:
-build_supervised_dataset_fake_friction.m
-logistic_regression.m
-build_supervised_dataset.m
-run_svm.m
-Python:
-TFANN.py
-
-
-
-**Fil 1: build_supervised_dataset_fake_friction.m
+**File: build_supervised_dataset_fake_friction.m
 Denna fil används för att bygga ett data set med fejkade friktionsvärden i kombination med 
 uppmätt väderleksdata. Friktionsvärderna viktas med avseende på fuktighet och temperatur 
 och en slumpfaktor:
-
 friktionsvärde = (temperatur+fuktighet+slump)/3
-
 där slump variabeln varierar mellan 0 och 0.5 (se rad 329).
-
 De tre fejkade föregående friktionsvärderna skapas enligt:
 
 föregående_friktionsvärde1 = (friktionsvärde+fuktighet_från_30min+temperatur_från_30min)/3
